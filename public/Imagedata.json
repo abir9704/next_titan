@@ -1,0 +1,88 @@
+{
+  "gallery": [
+    {
+      "id": 1,
+      "image": "https://i.ibb.co.com/XZRXBCxQ/630135416-18092459408075773-8976705013927673673-n.jpg",
+      "caption": "Morning vibes with coffee",
+      "uploadedAt": "2026-04-01"
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co.com/PL9fcQd/630135416-18092460476075773-6845447196251527914-n.jpg",
+      "caption": "City lights at night",
+      "uploadedAt": "2026-04-02"
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co.com/B2L55TM9/630433436-18092459885075773-5849156863328284561-n.jpg",
+      "caption": "Chill afternoon mood",
+      "uploadedAt": "2026-04-03"
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co.com/td67G3V/630974510-18092459228075773-4347757885966326289-n.jpg",
+      "caption": "Nature walk and peace",
+      "uploadedAt": "2026-04-04"
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co.com/YCmWB0T/631353131-18092459777075773-7971609856993193536-n.jpg",
+      "caption": "Golden hour perfection",
+      "uploadedAt": "2026-04-05"
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co.com/TxY8Dbxv/631493675-18092460221075773-108143810323612524-n.jpg",
+      "caption": "Urban vibes and reflections",
+      "uploadedAt": "2026-04-06"
+    },
+    {
+      "id": 7,
+      "image": "https://i.ibb.co.com/hFqFtLSv/Buzz-Cut.jpg",
+      "caption": "Fresh buzz cut style",
+      "uploadedAt": "2026-04-07"
+    },
+    {
+      "id": 8,
+      "image": "https://i.ibb.co.com/hFNzBf3J/Edited-with-AI-and-Instagram-pre-built-filter-1-1.jpg",
+      "caption": "AI art vibes",
+      "uploadedAt": "2026-04-08"
+    },
+    {
+      "id": 9,
+      "image": "https://i.ibb.co.com/NdgMM2RD/I-turned-30-today-Just-another-typical-day-for-me-I-dont-believe-in-birthdays-1.jpg",
+      "caption": "Birthday thoughts",
+      "uploadedAt": "2026-04-09"
+    },
+    {
+      "id": 10,
+      "image": "https://i.ibb.co.com/h1cHzkhC/I-turned-30-today-Just-another-typical-day-for-me-I-dont-believe-in-birthdays-2.jpg",
+      "caption": "Reflecting on life",
+      "uploadedAt": "2026-04-10"
+    },
+    {
+      "id": 11,
+      "image": "https://i.ibb.co.com/9HLcwF9Z/tobe1.jpg",
+      "caption": "Tobe adventures part 1",
+      "uploadedAt": "2026-04-11"
+    },
+    {
+      "id": 12,
+      "image": "https://i.ibb.co.com/27XYhFGD/tobe2.jpg",
+      "caption": "Tobe adventures part 2",
+      "uploadedAt": "2026-04-12"
+    },
+    {
+      "id": 13,
+      "image": "https://i.ibb.co.com/Nn76gW3T/tobe3.jpg",
+      "caption": "Tobe adventures part 3",
+      "uploadedAt": "2026-04-13"
+    },
+    {
+      "id": 14,
+      "image": "https://i.ibb.co.com/xwqrQTg/tobe4.jpg",
+      "caption": "Tobe adventures part 4",
+      "uploadedAt": "2026-04-14"
+    }
+  ]
+}
