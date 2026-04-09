@@ -1,11 +1,19 @@
-"use client"
-import Image from "next/image";
-import Titanlayout from "./Titanlayout";
+import Handlayout from "./Handlayout";
+
+
+
+
+
+
+
+
 
 export default function Home() {
   return (
     <div >
-      <Titanlayout></Titanlayout>
+
+      <Handlayout></Handlayout>
+   
     
     </div>
   );
