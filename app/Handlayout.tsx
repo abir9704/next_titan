@@ -33,6 +33,7 @@
 
 "use client"
 import React, { useEffect, useState } from 'react';
+import Imageslider from './Imageslider';
 
 const Handlayout = () => {
   const [imageholder,setimageholder] = useState([]);
@@ -45,18 +46,31 @@ const Handlayout = () => {
 
   },[])
     return (
-       <div className="relative bg-gradient-to-b from-[#0f2a20] via-[#121815] to-[#08110b] min-h-[140vh]">
+       <div className="relative bg-gradient-to-b from-[#0f2a20] via-[#121815] to-[#08110b] min-h-[140vh] ">
 
         {/* Background image - সবার নিচে */}
-        <div className="absolute inset-0 bg-[url('/rt567.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay z-[0]"></div>
+        <div className="absolute inset-0 bg-[url('/rt567.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay z-[0] "></div>
 
         {/* Content - উপরে */}
-        <div className='relative z-[1] '>
-            <div className='pt-[20px]'>
+        <div className='relative z-[1]  '>
+
+
+          <div
+  className="absolute top-[790px] left-[170px] h-[4px] w-full rounded-full z-[1] "
+  style={{
+    
+   
+   
+    background: 'linear-gradient(to bottom, #8f8f8f, #e5e5e5, #8f8f8f)',
+    boxShadow: '0 0 4px #efefef, 0 0 10px #efefef, 0 0 20px #efefef, 0 0 40px #efefef, 0 0 60px #efefef'
+  }}
+>
+</div>
+            <div className='pt-[20px] '>
                 <img src="1wr.png" className='w-[185px] h-[185px] ml-[80px]' alt="" />
                {/* Silver line */}
 <div
-  className="absolute left-[170px] w-[4px] rounded-full z-[1]"
+  className="absolute left-[170px] w-[4px] rounded-full z-[1] border-2 border-green-700 "
   style={{
     top: '187px',
     bottom: '0',
@@ -68,43 +82,47 @@ const Handlayout = () => {
 </div>
 
 
-<div
-  className=" mt-[485px] ml-[170px] h-[4px] w-screen rounded-full z-[1]"
-  style={{
-    top: '187px',
-    bottom: '0',
-   
-    background: 'linear-gradient(to bottom, #8f8f8f, #e5e5e5, #8f8f8f)',
-    boxShadow: '0 0 4px #efefef, 0 0 10px #efefef, 0 0 20px #efefef, 0 0 40px #efefef, 0 0 60px #efefef'
-  }}
->
-</div>
 
-<div className='text-white ml-[300px]'>
-  <div className='w-[468px] h-[468px] absolute top-[565px]'>
 
-     <img className='w-[230px] h-[254px] object-cover' src="33.jpg" alt="" />
+
+<div className='text-white ml-[200px] '>
+
+  <div >
+
+     <Imageslider imageholder={imageholder}></Imageslider>
 
   </div>
 
-  <div>
+
+  
+
+
+
+
+  {/* <div  className=' absolute top-[565px] gap-12 grid grid-cols-6 '>
     {
       imageholder.map((singleimage,index)=>{
         return(
-          <div key={index}>
-             <img src={singleimage.image} alt="" />
+          <div className='border-7 border-[#c2c2c2]' key={index}>
+             <img className='w-[230px] h-[254px] object-cover' src={singleimage.image} alt="" />
           </div>
         )
       })
     }
-  </div>
+  </div> */}
  
 </div>
+
+
+
+
+
+
             </div>
         </div>
 
         {/* Hexagon - উপরে */}
-        <div className="absolute top-[85px] right-[120px] h-[500px] z-[1]">
+        <div className="absolute top-[85px] right-[120px] h-[500px] z-[1] ">
           <svg 
   width="420" 
   height="420" 
