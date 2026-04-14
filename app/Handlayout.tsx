@@ -32,11 +32,14 @@
 
 
 "use client"
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Imageslider from './Imageslider';
+import { motion } from "framer-motion";
 
 const Handlayout = () => {
   const [imageholder,setimageholder] = useState([]);
+   const [started, setStarted] = useState(false); 
+     const audioRef = useRef(null);
 
   useEffect(()=>{
 
@@ -45,6 +48,35 @@ const Handlayout = () => {
     .then(data=>setimageholder(data.gallery))
 
   },[])
+
+    const handleStart = () => {
+    audioRef.current = new Audio("/bgmp.mp3");
+    audioRef.current.loop = true;
+    audioRef.current.play().catch(err => console.warn("Audio error:", err));
+    setStarted(true);
+  };
+
+
+    if (!started) {
+    return (
+      <div
+        onClick={handleStart}
+        className="h-screen w-full bg-[url('/red.jpg')] bg-cover bg-center flex flex-col justify-center items-center cursor-pointer"
+      >
+
+     
+        <motion.p
+  className="text-white text-2xl font-bold text-center animate-pulse"
+  initial={{ opacity: 0, y: -40 }}  // start invisible and slightly down
+  animate={{ opacity: 1, y: 20 }}   // fade in and move to original position
+  transition={{ duration: 3, ease: "easeOut" }} // smooth fade in
+>
+ 
+  
+</motion.p>
+      </div>
+    );
+  }
     return (
        <div className="relative bg-gradient-to-b from-[#0f2a20] via-[#121815] to-[#08110b] min-h-[140vh] ">
 
@@ -60,7 +92,7 @@ const Handlayout = () => {
   style={{
     
    
-   
+   minWidth: 'calc(100vh-170px)',
     background: 'linear-gradient(to bottom, #8f8f8f, #e5e5e5, #8f8f8f)',
     boxShadow: '0 0 4px #efefef, 0 0 10px #efefef, 0 0 20px #efefef, 0 0 40px #efefef, 0 0 60px #efefef'
   }}
