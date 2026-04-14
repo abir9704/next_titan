@@ -35,6 +35,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Imageslider from './Imageslider';
 import { motion } from "framer-motion";
+import AnimateText from './AnimateText';
+import { Coiny, Lobster } from 'next/font/google';
+
+
+const lob = Lobster({
+  subsets: ['latin'],
+  weight: '400',
+});
 
 const Handlayout = () => {
   const [imageholder,setimageholder] = useState([]);
@@ -99,7 +107,29 @@ const Handlayout = () => {
 >
 </div>
             <div className='pt-[20px] '>
-                <img src="1wr.png" className='w-[185px] h-[185px] ml-[80px]' alt="" />
+
+              <div className='flex items-center gap-130'>
+                <div>
+
+                  <img src="1wr.png" className='w-[185px] h-[185px] ml-[80px]' alt="" />
+
+                </div>
+
+                <div className={`${lob.className} tracking-widest `}>
+
+                 <p className="text-center text-4xl font-bold bg-gradient-to-r from-slate-100 via-white to-slate-400 text-transparent bg-clip-text mb-[10px]">
+  ABIR HASAN
+</p>
+                   <p className=' text-center text-3xl bg-gradient-to-r from-slate-100 via-white to-slate-400 font-bold text-transparent bg-clip-text'>DIFFERENT MOMENTS, SAME PERSON</p>
+
+                </div>
+                  
+
+              </div>
+              
+
+
+              
                {/* Silver line */}
 <div
   className="absolute left-[170px] w-[4px] rounded-full z-[1] border-2 border-green-700 "
@@ -124,6 +154,15 @@ const Handlayout = () => {
      <Imageslider imageholder={imageholder}></Imageslider>
 
   </div>
+
+  <div className='mt-[220px] flex justify-center'>
+
+    <AnimateText></AnimateText>
+
+  </div>
+
+
+  
 
 
   
