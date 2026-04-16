@@ -90,37 +90,39 @@ const Handlayout = () => {
 
         {/* Background image - সবার নিচে */}
         <div className="absolute inset-0 bg-[url('/rt567.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay z-[0] "></div>
+        <div className="absolute top-[90px] left-[780px] inset-0 bg-[url('/x2.png')] bg-cover bg-center opacity-25 mix-blend-overlay z-[1] w-[590px] h-[590px]"></div>
 
         {/* Content - উপরে */}
         <div className='relative z-[1]  '>
 
 
           <div
-  className="absolute top-[790px] left-[170px] h-[4px] w-full rounded-full z-[1] "
+  className="absolute top-[790px] lg:left-[170px] md:left-[110px] sm:left-[92px] h-[4px] w-[91%] rounded-full z-[1]  "
   style={{
     
    
-   minWidth: 'calc(100vh-170px)',
+   
     background: 'linear-gradient(to bottom, #8f8f8f, #e5e5e5, #8f8f8f)',
-    boxShadow: '0 0 4px #efefef, 0 0 10px #efefef, 0 0 20px #efefef, 0 0 40px #efefef, 0 0 60px #efefef'
+    boxShadow: '0 0 4px #efefef, 0 0 10px #efefef, 0 0 20px #efefef, 0 0 40px #efefef, 0 0 60px #efefef',
+    
   }}
 >
 </div>
             <div className='pt-[20px] '>
 
-              <div className='flex items-center gap-130'>
+              <div className='flex items-center 5xl:gap-[500px] 4xl:gap-[400px] 3xl:gap-[300px] 2xl:gap-[200px] xl:gap-[100px] lg:gap-[40px] md:gap-[55px] sm:gap-[28px] '>
                 <div>
 
-                  <img src="1wr.png" className='w-[185px] h-[185px] ml-[80px]' alt="" />
+                  <img src="1wr.png" className='w-[165px] h-[165px] lg:ml-[80px] md:ml-[20px] sm:ml-[2px]' alt="" />
 
                 </div>
 
                 <div className={`${lob.className} tracking-widest `}>
 
-                 <p className="text-center text-4xl font-bold bg-gradient-to-r from-slate-100 via-white to-slate-400 text-transparent bg-clip-text mb-[10px]">
+                 <p className="text-center 2xl:text-4xl xl:text-3xl md:text-2xl sm:text-[20px] text-[16px] font-bold bg-gradient-to-r from-slate-100 via-white to-slate-400 text-transparent bg-clip-text mb-[10px]">
   ABIR HASAN
 </p>
-                   <p className=' text-center text-3xl bg-gradient-to-r from-slate-100 via-white to-slate-400 font-bold text-transparent bg-clip-text'>DIFFERENT MOMENTS, SAME PERSON</p>
+                   <p className=' text-center 2xl:text-4xl xl:text-3xl md:text-2xl sm:text-[20px] text-[16px] bg-gradient-to-r from-slate-100 via-white to-slate-400 font-bold text-transparent bg-clip-text'>DIFFERENT MOMENTS, SAME PERSON</p>
 
                 </div>
                   
@@ -132,9 +134,9 @@ const Handlayout = () => {
               
                {/* Silver line */}
 <div
-  className="absolute left-[170px] w-[4px] rounded-full z-[1] border-2 border-green-700 "
+  className="absolute  lg:left-[162px] md:left-[102px] sm:left-[76px] left-[18%]  w-[4px] rounded-full z-[1] border-2 border-green-700 "
   style={{
-    top: '187px',
+    top: '170px',
     bottom: '0',
     minHeight: 'calc(140vh - 187px)',
     background: 'linear-gradient(to bottom, #8f8f8f, #e5e5e5, #8f8f8f)',
@@ -147,7 +149,7 @@ const Handlayout = () => {
 
 
 
-<div className='text-white ml-[200px] '>
+<div className='text-white xl:ml-[180px] lg:ml-[170px] md:ml-[100px] sm:ml-[80px] ml-[60px]'>
 
   <div >
 
@@ -193,7 +195,7 @@ const Handlayout = () => {
         </div>
 
         {/* Hexagon - উপরে */}
-        <div className="absolute top-[85px] right-[120px] h-[500px] z-[1] ">
+        {/* <div className="absolute top-[85px] 2xl:right-[100px] xl:right-[30px]  lg:right-[3px] h-[500px] z-[1] ">
           <svg 
   width="420" 
   height="420" 
@@ -233,7 +235,54 @@ const Handlayout = () => {
     />
   </g>
 </svg>
-        </div>
+        </div> */}
+
+        {/* Hexagon - উপরে */}
+<div className="absolute top-[200px] right-[30px] lg:top-[85px] md:top-[180px] sm:top-[180px] 2xl:right-[100px] xl:right-[30px] lg:right-[3px] md:right-[1px] sm:right-[1px] z-[1] w-[250px] h-[250px] sm:w-[260px] sm:h-[260px] md:w-[320px] md:h-[320px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[420px] 2xl:h-[420px]">
+  <svg 
+    width="100%" 
+    height="100%" 
+    viewBox="0 0 100 100"
+    preserveAspectRatio="xMidYMid meet"
+    style={{ isolation: 'isolate' }}
+  >
+    <defs>
+      <linearGradient id="silverFade" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#0a0a0a" />
+        <stop offset="30%" stopColor="#bfbfbf" />
+        <stop offset="70%" stopColor="#f5f5f5" />
+        <stop offset="100%" stopColor="#1a1a1a" />
+      </linearGradient>
+      <clipPath id="hexClip">
+        <polygon
+          points="26,8 74,8 93,50 74,92 26,92 7,50"
+          transform="rotate(17 50 50)"
+        />
+      </clipPath>
+    </defs>
+
+    <image
+      href="/r809.jpg"
+      x="0" y="0"
+      width="100" height="100"
+      preserveAspectRatio="xMidYMid slice"
+      clipPath="url(#hexClip)"
+      style={{ mixBlendMode: 'normal' }}
+    />
+
+    <g transform="rotate(17 50 50)">
+      <polygon
+        points="26,8 74,8 93,50 74,92 26,92 7,50"
+        fill="none"
+        stroke="url(#silverFade)"
+        strokeWidth="2.5"
+      />
+    </g>
+  </svg>
+</div>
+
+
+        
 
       </div>
     );

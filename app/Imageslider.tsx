@@ -53,10 +53,11 @@
 
 
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ChevronLeft } from 'lucide-react';
 import { ChevronRight } from 'lucide-react';
+import spreadfont from 'next/font/local';
 
 import 'swiper/css';
 // import 'swiper/css/pagination';
@@ -65,10 +66,42 @@ import './styles.css';
 
 // import { Pagination } from 'swiper/modules';
 import { Navigation } from 'swiper/modules';
+import { IoCloseCircleSharp } from 'react-icons/io5';
+
+
+
+const myFont = spreadfont({
+  src: './font/spread.otf',
+  weight: '400',
+  style: 'normal'
+})
 
 const Imageslider = ({ imageholder }) => {
+
+  const [modalopen,setmodalopen]=useState(false);
+  const [modalobj,setmodalobj]= useState({});
+
+  const audio = new Audio("/rtx.mp3");
+
+  const openmodal=(simage)=>{
+    console.log(simage);
+    setmodalobj(simage);
+    setmodalopen(true);
+  }
+
+  const handlemodal=()=>{
+    setmodalopen(false);
+    setmodalobj({});
+  }
+
+  const soundplay=()=>{
+
+    audio.currentTime = 0;
+    audio.play();
+
+  }
   return (
-    <div className="w-full mt-[430px] px-4 relative">
+    <div className="w-full mt-[430px] px-4 relative cursor-pointer">
       <Swiper
         spaceBetween={10}
         // pagination={{ clickable: true }}
@@ -91,14 +124,14 @@ const Imageslider = ({ imageholder }) => {
       >
         {imageholder?.map((singleimage, index) => (
           <SwiperSlide key={index}>
-            <div className="slideBox">
+            <div onClick={()=>openmodal(singleimage)} className="slideBox">
               <img src={singleimage.image} alt="" />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-        <div className="custom-prev absolute left-2 top-1/2 -translate-y-1/2 z-10 cursor-pointer text-white">
+        <div onClick={soundplay} className="custom-prev absolute left-2 top-1/2 -translate-y-1/2 z-10 cursor-pointer text-white">
     <ChevronLeft
   size={65}
   className="
@@ -115,7 +148,7 @@ const Imageslider = ({ imageholder }) => {
   </div>
 
   {/* RIGHT */}
-  <div className="custom-next absolute right-2 top-1/2 -translate-y-1/2 z-10 cursor-pointer text-white">
+  <div onClick={soundplay} className="custom-next absolute right-2 top-1/2 -translate-y-1/2 z-10 cursor-pointer text-white">
 <ChevronRight
   size={65}
   className="
@@ -130,6 +163,52 @@ const Imageslider = ({ imageholder }) => {
   "
 />
   </div>
+  {
+
+    modalopen &&  <div>
+
+      <div className='fixed inset-0 flex items-center justify-center bg-black/90 z-50 '>
+
+      <div className='grid grid-cols-7'>
+
+            <div className='w-[600px] h-auto flex justify-center items-center  bg-black col-span-4'>
+
+              <div className=''>
+
+                <img src={modalobj.image} className='w-full h-auto'/>
+          <IoCloseCircleSharp onClick={handlemodal} size={40}  className='text-blue-800 absolute top-5 right-5'/>
+
+              </div>
+
+          
+          
+
+        </div>
+
+      <div className="relative col-span-3 bg-[#0c201a]">
+  
+  <div className="absolute inset-0 bg-[url('/rtz.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay pointer-events-none"></div>
+
+  <div className={`relative p-4 ${myFont.className} text-[#a3842e] text-shadow-amber-800 text-4xl `} >
+    <p className='pl-4 pt-5'>Date Uploaded: {modalobj.uploadedAt}</p>
+    <p className='mt-3 pl-4 text-5xl'>{modalobj.caption}</p>
+  </div>
+
+</div>
+
+
+      </div>
+       
+      
+  </div>
+
+
+  </div>
+    
+  }
+
+ 
+
 
     </div>
   );
