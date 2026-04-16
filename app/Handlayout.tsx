@@ -51,9 +51,9 @@ const Handlayout = () => {
 
   useEffect(()=>{
 
-    fetch("/imagedata.json")
+    fetch("http://localhost:5000/gallery")
     .then(res=>res.json())
-    .then(data=>setimageholder(data.gallery))
+    .then(data=>setimageholder(data))
 
   },[])
 
@@ -90,14 +90,14 @@ const Handlayout = () => {
 
         {/* Background image - সবার নিচে */}
         <div className="absolute inset-0 bg-[url('/rt567.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay z-[0] "></div>
-        <div className="absolute top-[90px] left-[780px] inset-0 bg-[url('/x2.png')] bg-cover bg-center opacity-25 mix-blend-overlay z-[1] w-[590px] h-[590px]"></div>
+        <div className="absolute lg:top-[90px] md:top-[110px] 3xl:left-[620px] 2xl:left-[500px] xl:left-[340px] lg:left-[240px] md:left-[150px] inset-0 bg-[url('/x2.png')] bg-cover bg-center opacity-25 mix-blend-overlay z-[1] xl:w-[580px] xl:h-[580px] lg:w-[500px] lg:h-[500px] md:w-[420px] md:h-[420px] hidden md:block"></div>
 
         {/* Content - উপরে */}
         <div className='relative z-[1]  '>
 
 
           <div
-  className="absolute top-[790px] lg:left-[170px] md:left-[110px] sm:left-[92px] h-[4px] w-[91%] rounded-full z-[1]  "
+  className="absolute top-[770px] lg:left-[170px] md:left-[110px] sm:left-[92px] left-[78px] h-[4px] 3xl:w-[89%] lg:w-[82%] md:w-[77%] sm:w-[65%] w-[76%] rounded-full z-[1]  "
   style={{
     
    
@@ -134,7 +134,7 @@ const Handlayout = () => {
               
                {/* Silver line */}
 <div
-  className="absolute  lg:left-[162px] md:left-[102px] sm:left-[76px] left-[18%]  w-[4px] rounded-full z-[1] border-2 border-green-700 "
+  className="absolute  lg:left-[162px] md:left-[102px] sm:left-[76px] left-[18%]  w-[4px] rounded-full z-[110]  "
   style={{
     top: '170px',
     bottom: '0',
