@@ -45,7 +45,7 @@ const lob = Lobster({
 });
 
 const Handlayout = () => {
-  const [imageholder,setimageholder] = useState([]);
+  const [imageholder, setimageholder] = useState<{ image: string }[]>([]);
    const [started, setStarted] = useState(false); 
      const audioRef = useRef<HTMLAudioElement | null>(null);
 

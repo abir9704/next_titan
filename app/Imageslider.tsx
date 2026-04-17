@@ -76,10 +76,10 @@ const myFont = spreadfont({
   style: 'normal'
 })
 
-const Imageslider = ({ imageholder }) => {
+const Imageslider = ({ imageholder }: { imageholder: { image: string }[] }) => {
 
   const [modalopen,setmodalopen]=useState(false);
-  const [modalobj,setmodalobj]= useState({});
+ const [modalobj, setmodalobj] = useState<{ image?: string }>({});
 
   const audio = new Audio("/rtx.mp3");
 
