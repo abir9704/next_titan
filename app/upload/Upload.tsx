@@ -8,7 +8,7 @@ const Upload = () => {
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
 
-  const handleUpload = async (file) => {
+  const handleUpload = async (file: File) => {
     if (!file) return;
 
     setLoading(true);
@@ -58,7 +58,7 @@ const Upload = () => {
         <input
           type="file"
           className="hidden"
-          onChange={(e) => handleUpload(e.target.files[0])}
+          onChange={(e) => { if (e.target.files?.[0]) handleUpload(e.target.files[0]); }}
         />
       </label>
 

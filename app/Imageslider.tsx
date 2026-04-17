@@ -76,14 +76,20 @@ const myFont = spreadfont({
   style: 'normal'
 })
 
-const Imageslider = ({ imageholder }: { imageholder: { image: string }[] }) => {
+type ImageType = {
+  image: string;
+  uploaded_date?: string;
+  caption?: string;
+};
 
-  const [modalopen,setmodalopen]=useState(false);
- const [modalobj, setmodalobj] = useState<{ image?: string }>({});
+const Imageslider = ({ imageholder }: { imageholder: ImageType[] }) => {
+
+ const [modalobj, setmodalobj] = useState<ImageType | null>(null);
+ const [modalopen, setmodalopen] = useState(false);
 
   const audio = new Audio("/rtx.mp3");
 
-  const openmodal=(simage)=>{
+ const openmodal = (simage: ImageType) => {
     console.log(simage);
     setmodalobj(simage);
     setmodalopen(true);
@@ -91,7 +97,7 @@ const Imageslider = ({ imageholder }: { imageholder: { image: string }[] }) => {
 
   const handlemodal=()=>{
     setmodalopen(false);
-    setmodalobj({});
+    setmodalobj(null);
   }
 
   const soundplay=()=>{
@@ -175,7 +181,7 @@ const Imageslider = ({ imageholder }: { imageholder: { image: string }[] }) => {
 
               <div className=''>
 
-                <img src={modalobj.image} className='w-full h-auto'/>
+                <img src={modalobj?.image} className='w-full h-auto'/>
           <IoCloseCircleSharp onClick={handlemodal} size={40}  className='text-blue-800 absolute top-5 right-5'/>
 
               </div>
@@ -190,8 +196,8 @@ const Imageslider = ({ imageholder }: { imageholder: { image: string }[] }) => {
   <div className="absolute inset-0 bg-[url('/rtz.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay pointer-events-none"></div>
 
   <div className={`relative p-4 ${myFont.className} text-[#a3842e] text-shadow-amber-800 text-4xl `} >
-    <p className='pl-4 pt-5'>Date Uploaded: {modalobj.uploaded_date}</p>
-    <p className='mt-3 pl-4 text-5xl'>{modalobj.caption}</p>
+    <p className='pl-4 pt-5'>Date Uploaded: {modalobj?.uploaded_date}</p>
+    <p className='mt-3 pl-4 text-5xl'>{modalobj?.caption}</p>
   </div>
 
 </div>
