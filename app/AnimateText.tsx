@@ -82,7 +82,7 @@ const interval2 = setInterval(() => {
               }}
               className="
                 text-[#a3842e]
-                xl:text-4xl lg:text-3xl md:text-2xl sm:text-lg text-sm
+                xl:text-4xl lg:text-3xl md:text-2xl sm:text-lg text-[16px]
                 tracking-tight
               "
             >

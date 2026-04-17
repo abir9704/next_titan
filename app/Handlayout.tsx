@@ -164,7 +164,7 @@ const Handlayout = () => {
 
   </div>
 
-  <div className='mt-[140px] flex justify-center'>
+  <div className='md:mt-[140px] mt-[100px] flex justify-center'>
 
     <AnimateText></AnimateText>
 
