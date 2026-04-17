@@ -117,7 +117,7 @@ const Handlayout = () => {
 </div>
             <div className='pt-[20px] '>
 
-              <div className='flex items-center 5xl:gap-[500px] 4xl:gap-[400px] 3xl:gap-[300px] 2xl:gap-[200px] xl:gap-[100px] lg:gap-[40px] md:gap-[55px] sm:gap-[28px] '>
+              <div className='flex items-center 5xl:gap-[500px] 4xl:gap-[365px] 3xl:gap-[300px] 2xl:gap-[200px] xl:gap-[100px] lg:gap-[40px] md:gap-[55px] sm:gap-[28px] '>
                 <div>
 
                   <img src="1wr.png" className='w-[165px] h-[165px] lg:ml-[80px] md:ml-[20px] sm:ml-[2px]' alt="" />
