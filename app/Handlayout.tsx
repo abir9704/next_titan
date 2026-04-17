@@ -47,11 +47,11 @@ const lob = Lobster({
 const Handlayout = () => {
   const [imageholder,setimageholder] = useState([]);
    const [started, setStarted] = useState(false); 
-     const audioRef = useRef(null);
+     const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(()=>{
 
-    fetch("http://localhost:5000/gallery")
+    fetch("https://titanbackend-5y95.onrender.com/gallery")
     .then(res=>res.json())
     .then(data=>setimageholder(data))
 
