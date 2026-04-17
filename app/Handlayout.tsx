@@ -57,13 +57,23 @@ const Handlayout = () => {
 
   },[])
 
-    const handleStart = () => {
-    audioRef.current = new Audio("/bgmp.mp3");
-    audioRef.current.loop = true;
-    audioRef.current.play().catch(err => console.warn("Audio error:", err));
-    setStarted(true);
-  };
+  //   const handleStart = () => {
+  //   audioRef.current = new Audio("/bgmp.mp3");
+  //   audioRef.current.loop = true;
+  //   audioRef.current.play().catch(err => console.warn("Audio error:", err));
+  //   setStarted(true);
+  // };
 
+
+  const handleStart = () => {
+  const audio = new Audio("/bgmp.mp3");
+
+  audio.loop = true;
+  audio.play().catch(err => console.warn("Audio error:", err));
+
+  audioRef.current = audio;
+  setStarted(true);
+};
 
     if (!started) {
     return (
