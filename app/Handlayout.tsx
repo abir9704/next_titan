@@ -73,20 +73,16 @@ const Handlayout = () => {
       >
 
      
-        <motion.p
-  className="text-white text-2xl font-bold text-center animate-pulse"
-  initial={{ opacity: 0, y: -40 }}  // start invisible and slightly down
-  animate={{ opacity: 1, y: 20 }}   // fade in and move to original position
-  transition={{ duration: 3, ease: "easeOut" }} // smooth fade in
->
- 
-  
-</motion.p>
+    
       </div>
     );
   }
     return (
-       <div className="relative bg-gradient-to-b from-[#0f2a20] via-[#121815] to-[#08110b] min-h-[140vh] ">
+       <motion.div
+       initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3 }}
+        className="relative bg-gradient-to-b from-[#0f2a20] via-[#121815] to-[#08110b] min-h-[140vh] ">
 
         {/* Background image - সবার নিচে */}
         <div className="absolute inset-0 bg-[url('/rt567.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay z-[0] "></div>
@@ -134,7 +130,7 @@ const Handlayout = () => {
               
                {/* Silver line */}
 <div
-  className="absolute  lg:left-[162px] md:left-[102px] sm:left-[76px] left-[18%]  w-[4px] rounded-full z-[110]  "
+  className="absolute  lg:left-[162px] md:left-[102px] sm:left-[76px] left-[18%]  w-[4px] rounded-full z-[1]  "
   style={{
     top: '170px',
     bottom: '0',
@@ -157,7 +153,7 @@ const Handlayout = () => {
 
   </div>
 
-  <div className='mt-[220px] flex justify-center'>
+  <div className='mt-[140px] flex justify-center'>
 
     <AnimateText></AnimateText>
 
@@ -238,7 +234,7 @@ const Handlayout = () => {
         </div> */}
 
         {/* Hexagon - উপরে */}
-<div className="absolute top-[200px] right-[30px] lg:top-[85px] md:top-[180px] sm:top-[180px] 2xl:right-[100px] xl:right-[30px] lg:right-[3px] md:right-[1px] sm:right-[1px] z-[1] w-[250px] h-[250px] sm:w-[260px] sm:h-[260px] md:w-[320px] md:h-[320px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[420px] 2xl:h-[420px]">
+<div className="absolute top-[200px] right-[30px] lg:top-[85px] md:top-[180px] sm:top-[180px] 2xl:right-[100px] xl:right-[30px] lg:right-[3px] md:right-[1px] sm:right-[1px] z-[0] w-[250px] h-[250px] sm:w-[260px] sm:h-[260px] md:w-[320px] md:h-[320px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] 2xl:w-[420px] 2xl:h-[420px]">
   <svg 
     width="100%" 
     height="100%" 
@@ -284,7 +280,7 @@ const Handlayout = () => {
 
         
 
-      </div>
+      </motion.div>
     );
 };
 

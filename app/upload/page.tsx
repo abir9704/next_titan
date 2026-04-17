@@ -1,11 +1,11 @@
 import React from 'react';
-import MotivationalPoster from './MotivationalPoster';
+import Upload from './Upload';
 
 const page = () => {
     return (
         <div>
 
-            <MotivationalPoster></MotivationalPoster>
+            <Upload></Upload>
             
         </div>
     );

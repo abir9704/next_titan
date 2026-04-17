@@ -169,9 +169,9 @@ const Imageslider = ({ imageholder }) => {
 
       <div className='fixed inset-0 flex items-center justify-center bg-black/90 z-50 '>
 
-      <div className='grid grid-cols-7'>
+      <div className='grid grid-cols-7 w-[950px] '>
 
-            <div className='w-[600px] h-auto flex justify-center items-center  bg-black col-span-4'>
+            <div className=' h-auto flex justify-center items-center  bg-black col-span-4 '>
 
               <div className=''>
 
@@ -190,7 +190,7 @@ const Imageslider = ({ imageholder }) => {
   <div className="absolute inset-0 bg-[url('/rtz.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay pointer-events-none"></div>
 
   <div className={`relative p-4 ${myFont.className} text-[#a3842e] text-shadow-amber-800 text-4xl `} >
-    <p className='pl-4 pt-5'>Date Uploaded: {modalobj.uploadedAt}</p>
+    <p className='pl-4 pt-5'>Date Uploaded: {modalobj.uploaded_date}</p>
     <p className='mt-3 pl-4 text-5xl'>{modalobj.caption}</p>
   </div>
 
